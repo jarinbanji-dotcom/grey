@@ -7,7 +7,7 @@ import threading
 # --- CONFIGURATION ---
 TELEGRAM_BOT_TOKEN = '8414741935:AAHrQxNw9iFHZxf-5syA6uG2lFyJzKVHQ_A'
 FIREBASE_DB_URL = 'https://forgrey-5cff2-default-rtdb.firebaseio.com/'
-SERVICE_ACCOUNT_KEY_PATH = 'forgrey-5cff2-firebase-adminsdk-fbsvc-e997c23843.json'
+SERVICE_ACCOUNT_KEY_PATH = 'firebasekey.json'
 
 is_initial_load = True
 
