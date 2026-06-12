@@ -95,7 +95,7 @@ def db_listener(event):
         return
 
     # Ensure it's a valid 'put' event with incoming data
-    if event.event_type == 'patch' and event.data:
+    if event.event_type == 'put' and event.data:
         data = event.data
         print(data)
         inner_data = next(iter(data.values()))
