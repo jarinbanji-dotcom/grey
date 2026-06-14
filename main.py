@@ -108,7 +108,7 @@ def db_listener(event):
             # SCENARIO A: A single new message is pushed.
             # Firebase sends just the contents of the new '-O...' ID.
             # data looks exactly like: {"from": "testing1234", "ts": 1781002055215, "type": "image", ...}
-            if data.get('from') == 'nikky':
+            if data.get('from') == 'grey':
                 print(f"[+] Alert! New message from testing1234 detected at path: {event.path}")
                 # Call your Telegram function here!
                 broadcast_alert_to_all()
@@ -119,7 +119,7 @@ def db_listener(event):
             else:
                 print("hola")
                 for child_id, inner_data in data.items():
-                    if isinstance(inner_data, dict) and inner_data.get('from') == 'nikky':
+                    if isinstance(inner_data, dict) and inner_data.get('from') == 'grey':
                         print(f"[+] Alert! New message from testing1234 detected inside ID: {child_id}")
                         # Call your Telegram function here!
                         # broadcast_alert_to_all() or send_direct_test_alert(str(inner_data))
